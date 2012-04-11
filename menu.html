@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title></title>
+		<style type="text/css">
+			*{
+				padding:0px;
+				margin:0px;
+			}
+			#father{
+				background:rgba(0,0,0,0.9);
+				display:none;
+				z-index:100;
+				position:absolute;
+				left:0;
+				top:0;
+			}
+			#son{
+				background:#224232;
+				padding-top:20px;
+				height:330px;
+				margin-left:20px;
+			}
+			#clicks{
+				padding:20px;
+			}
+		</style>
+		<script type="text/javascript">
+			var pageWidth=window.innerWidth,
+			    pageHeight=window.innerHeight;
+			
+			if(typeof pageWidth!="number")
+			{
+				if(document.compatMode=="CSS1Compat")
+				{
+					pageWidth=document.documentElement.clientWidth;
+					pageHeight=document.documentElement.clientHeight;
+				}
+				else{
+					pageWidth=document.body.clientWidth;
+					pageHeight=document.body.clientWidth;
+				}				
+			}
+			function ccclick()
+			{
+				
+				var clicks=document.getElementById("clicks");
+				var father=document.getElementById("father");
+				clicks.onclick=function(){
+					var docHeight=Math.max(document.documentElement.scrollHeight,pageHeight);
+					var docWidth=Math.max(document.documentElement.scrollWidth,pageWidth);
+					//var div=document.createElement("div");
+					//var text=document.createTextNode(docHeight);
+					//div.appendChild(text);
+					//document.body.appendChild(div);
+					
+					father.style.width="100%";
+					father.style.height=docHeight+"px";
+					father.style.display="block";
+					}
+				father.onclick=function(event)
+				{
+					father.style.display="none";
+					event.stopPropagation();
+				}
+			}
+		</script>
+	</head>
+	<body onload="ccclick();">	
+        <div id="clicks">
+			please click here to see the son'content.
+		</div>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<div id="father">
+			<div id="son">
+			</div>
+		</div>
+	</body>
+</html>
