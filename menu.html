@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -18,9 +18,8 @@
 			}
 			#son{
 				background:#224232;
-				padding-top:20px;
 				height:330px;
-				margin-left:20px;
+				width:400px;
 			}
 			#clicks{
 				padding:20px;
@@ -42,22 +41,37 @@
 					pageHeight=document.body.clientWidth;
 				}				
 			}
+			function readOutsideCss(id,property)  //javascript 取内联样式的值
+			{
+				var propertyValue;
+				if(id.currentStyle)
+			    {
+					propertyValue=id.currentStyle[property];
+				}
+				else if(window.getComputedStyle)
+				{
+					propertyValue=window.getComputedStyle(id,null)[property];
+				}
+				return propertyValue;
+			}			
 			function ccclick()
 			{
 				
 				var clicks=document.getElementById("clicks");
 				var father=document.getElementById("father");
+				var son=document.getElementById("son");
 				clicks.onclick=function(){
 					var docHeight=Math.max(document.documentElement.scrollHeight,pageHeight);
 					var docWidth=Math.max(document.documentElement.scrollWidth,pageWidth);
-					//var div=document.createElement("div");
-					//var text=document.createTextNode(docHeight);
-					//div.appendChild(text);
-					//document.body.appendChild(div);
-					
-					father.style.width="100%";
+					var scrollTop=document.documentElement.scrollTop;
 					father.style.height=docHeight+"px";
+					father.style.width="100%";
 					father.style.display="block";
+					var height=parseInt(readOutsideCss(son,'height'));
+				    var width=parseInt(readOutsideCss(son,'width'));
+					sonHeight=parseInt(height);
+                    var sonTop=pageHeight/2-sonHeight/2+scrollTop;
+					son.style.margin=sonTop+"px auto 0 auto";
 					}
 				father.onclick=function(event)
 				{
@@ -68,39 +82,42 @@
 		</script>
 	</head>
 	<body onload="ccclick();">	
-        <div id="clicks">
+        
+		<p>ddddddddddddddddddddddffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffggfddddddddddfffffff
+		fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<p>dddddddddddddddddddddd</p>
+		<div id="clicks">
 			please click here to see the son'content.
 		</div>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
 		<p>dddddddddddddddddddddd</p>
 		<p>dddddddddddddddddddddd</p>
 		<p>dddddddddddddddddddddd</p>
