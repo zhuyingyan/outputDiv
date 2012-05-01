@@ -8,6 +8,9 @@
 				padding:0px;
 				margin:0px;
 			}
+			h1{
+				text-align:center;
+			}
 			#father{
 				background:rgba(0,0,0,0.9);
 				display:none;
@@ -23,6 +26,17 @@
 			}
 			#clicks{
 				padding:20px;
+				width:960px;
+				margin:0 auto;
+				overflow:hidden;
+			}
+			.blockToClick{
+				margin:10px;
+				float:left;
+				width:200px;
+				height:200px;
+				background:#876;
+				cursor:pointer;
 			}
 		</style>
 		<script type="text/javascript">
@@ -58,9 +72,12 @@
 			{
 				
 				var clicks=document.getElementById("clicks");
+				var divBlock=clicks.getElementsByTagName("div");
 				var father=document.getElementById("father");
 				var son=document.getElementById("son");
-				clicks.onclick=function(){
+				for(var i=0;i<divBlock.length;i++)
+				{
+				divBlock[i].onclick=function(){
 					var docHeight=Math.max(document.documentElement.scrollHeight,pageHeight);
 					var docWidth=Math.max(document.documentElement.scrollWidth,pageWidth);
 					var scrollTop=document.documentElement.scrollTop;
@@ -73,6 +90,7 @@
                     var sonTop=pageHeight/2-sonHeight/2+scrollTop;
 					son.style.margin=sonTop+"px auto 0 auto";
 					}
+				}
 				father.onclick=function(event)
 				{
 					father.style.display="none";
@@ -82,52 +100,26 @@
 		</script>
 	</head>
 	<body onload="ccclick();">	
-        
-		<p>ddddddddddddddddddddddffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffggfddddddddddfffffff
-		fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
+        <h1>Show the output Div</h1>
 		
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
 		<div id="clicks">
-			please click here to see the son'content.
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
+			<div class="blockToClick"></div>
 		</div>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
-		<p>dddddddddddddddddddddd</p>
 		<div id="father">
 			<div id="son">
 			</div>
